@@ -1,0 +1,806 @@
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Inter',sans-serif;
+
+}
+
+
+
+body{
+
+    background:#0f172a;
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:30px;
+
+}
+
+
+
+
+
+.container{
+
+    width:100%;
+
+    max-width:750px;
+
+}
+
+
+
+
+
+header{
+
+    text-align:center;
+
+    margin-bottom:30px;
+
+    position:relative;
+
+}
+
+
+
+
+
+header h1{
+
+    font-size:38px;
+
+    color:#fff;
+
+    font-weight:700;
+
+    margin-bottom:8px;
+
+}
+
+
+
+
+
+header p{
+
+    color:#cbd5e1;
+
+    font-size:16px;
+
+}
+
+
+
+
+
+.btn-sair{
+
+    position:absolute;
+
+    right:0;
+
+    top:0;
+
+    background:#dc2626;
+
+    color:white;
+
+    border:none;
+
+    padding:10px 22px;
+
+    border-radius:10px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+
+
+.btn-sair:hover{
+
+    background:#b91c1c;
+
+    transform:translateY(-2px);
+
+}
+
+
+
+
+
+.card{
+
+    background:#ffffff;
+
+    border-radius:22px;
+
+    padding:35px;
+
+    box-shadow:
+
+    0 25px 60px rgba(0,0,0,.35);
+
+}
+
+
+
+
+
+/* PESQUISA */
+
+
+.search-box{
+
+    display:flex;
+
+    gap:15px;
+
+    margin-bottom:25px;
+
+}
+
+
+
+
+
+.search-box input{
+
+    flex:1;
+
+    height:55px;
+
+    border:1px solid #e5e7eb;
+
+    outline:none;
+
+    background:#f8fafc;
+
+    border-radius:14px;
+
+    padding:0 20px;
+
+    font-size:16px;
+
+}
+
+
+
+.search-box input:focus{
+
+    border-color:#dc2626;
+
+    background:white;
+
+}
+
+
+
+
+
+.search-box button{
+
+
+    width:160px;
+
+    border:none;
+
+    border-radius:14px;
+
+    background:#dc2626;
+
+    color:white;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+
+
+.search-box button:hover{
+
+    background:#b91c1c;
+
+}
+
+
+
+
+
+
+
+
+/* RESULTADO */
+
+
+#resultado{
+
+    min-height:150px;
+
+    border:2px dashed #e2e8f0;
+
+    border-radius:16px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:25px;
+
+    margin-bottom:35px;
+
+}
+
+
+
+
+
+.mensagem{
+
+    color:#64748b;
+
+    text-align:center;
+
+}
+
+
+
+.sucesso{
+
+    color:#16a34a;
+
+    font-weight:700;
+
+}
+
+
+
+
+
+
+
+
+/* CARD CANDIDATO */
+
+
+.card-candidato{
+
+
+    width:100%;
+
+    background:white;
+
+    border-radius:18px;
+
+    padding:25px;
+
+    text-align:left;
+
+    border-left:5px solid #dc2626;
+
+    box-shadow:
+
+    0 10px 25px rgba(0,0,0,.08);
+
+}
+
+
+
+.card-candidato h2{
+
+    color:#111827;
+
+    margin-bottom:20px;
+
+}
+
+
+
+
+
+.linha{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    padding:12px 0;
+
+    border-bottom:1px solid #e5e7eb;
+
+}
+
+
+
+.linha span{
+
+    color:#64748b;
+
+}
+
+
+
+.linha strong{
+
+    color:#111827;
+
+}
+
+
+
+
+
+
+
+
+
+/* CADASTRO */
+
+
+.cadastro{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:15px;
+
+    border-top:1px solid #e5e7eb;
+
+    padding-top:30px;
+
+}
+
+
+
+
+
+.cadastro h2{
+
+    color:#111827;
+
+    font-size:24px;
+
+}
+
+
+
+
+
+.cadastro input,
+
+.cadastro select{
+
+
+    height:52px;
+
+    border:1px solid #e5e7eb;
+
+    background:#f8fafc;
+
+    border-radius:14px;
+
+    padding:0 18px;
+
+    font-size:15px;
+
+    outline:none;
+
+}
+
+
+
+.cadastro input:focus,
+
+.cadastro select:focus{
+
+    border-color:#dc2626;
+
+    background:white;
+
+}
+
+
+
+
+
+
+
+.cadastro button{
+
+
+    height:55px;
+
+    border:none;
+
+    border-radius:14px;
+
+    background:#dc2626;
+
+    color:white;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+
+
+.cadastro button:hover{
+
+    background:#b91c1c;
+
+}
+
+
+
+
+
+
+
+
+
+/* CONTADOR */
+
+
+.contador{
+
+
+    margin-top:20px;
+
+    display:inline-block;
+
+    background:white;
+
+    color:#111827;
+
+    padding:12px 20px;
+
+    border-radius:12px;
+
+    font-size:16px;
+
+    box-shadow:
+
+    0 8px 20px rgba(0,0,0,.15);
+
+}
+
+
+
+
+
+.contador strong{
+
+    color:#dc2626;
+
+}
+
+
+
+
+
+
+/* DATA */
+
+
+.data-atual{
+
+    margin-top:12px;
+
+    color:#cbd5e1;
+
+    font-size:15px;
+
+}
+
+
+
+
+
+
+
+
+
+/* LOGIN */
+
+
+.login{
+
+    max-width:420px;
+
+    margin:auto;
+
+    padding:45px 35px;
+
+    text-align:center;
+
+}
+
+
+
+.login h1{
+
+    color:#111827;
+
+    font-size:32px;
+
+    margin-bottom:12px;
+
+}
+
+
+
+.login p{
+
+    color:#64748b;
+
+    margin-bottom:30px;
+
+}
+
+
+
+
+
+.login input{
+
+    width:100%;
+
+    height:55px;
+
+    margin-bottom:18px;
+
+    border:1px solid #e5e7eb;
+
+    background:#f8fafc;
+
+    border-radius:14px;
+
+    padding:0 18px;
+
+    font-size:16px;
+
+    outline:none;
+
+}
+
+
+
+
+
+.login input:focus{
+
+    background:white;
+
+    border-color:#dc2626;
+
+}
+
+
+
+
+
+.login button{
+
+
+    width:100%;
+
+    height:55px;
+
+    border:none;
+
+    border-radius:14px;
+
+    background:#dc2626;
+
+    color:white;
+
+    font-size:17px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+}
+
+
+
+.login button:hover{
+
+    background:#b91c1c;
+
+}
+
+
+
+
+
+
+
+
+
+/* SENHA COM CADEADO */
+
+
+.senha-box{
+
+    position:relative;
+
+    width:100%;
+
+    height:55px;
+
+}
+
+
+
+.senha-box input{
+
+    width:100%;
+
+    padding-right:55px;
+
+}
+
+
+
+.senha-box button{
+
+    position:absolute;
+
+    right:12px;
+
+    top:27px;
+
+    transform:translateY(-50%);
+
+    width:35px;
+
+    height:35px;
+
+    border:none;
+
+    background:transparent;
+
+    color:#64748b;
+
+    font-size:20px;
+
+    padding:0;
+
+    margin:0;
+
+    cursor:pointer;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+}
+
+
+
+.senha-box button:hover{
+
+
+    background:#f1f5f9;
+
+    border-radius:50%;
+
+
+}
+
+
+
+
+
+#mensagem{
+
+    margin-top:20px;
+
+    font-weight:600;
+
+}
+
+
+
+
+
+
+
+
+
+/* CELULAR */
+
+
+@media(max-width:650px){
+
+
+body{
+
+    padding:15px;
+
+}
+
+
+
+header h1{
+
+    font-size:28px;
+
+}
+
+
+
+.btn-sair{
+
+    position:static;
+
+    margin-top:15px;
+
+}
+
+
+
+.search-box{
+
+    flex-direction:column;
+
+}
+
+
+
+.search-box button{
+
+    width:100%;
+
+}
+
+
+
+.card{
+
+    padding:25px;
+
+}
+
+
+
+.linha{
+
+    flex-direction:column;
+
+    gap:5px;
+
+}
+
+
+}

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Controle de SDR</title>
+
+
+<link rel="stylesheet" href="style.css">
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+
+</head>
+
+
+<body>
+
+
+<div class="container">
+
+
+<header>
+
+
+<h1>
+Controle de SDR
+</h1>
+
+
+<p>
+Pesquise e gerencie candidatos.
+</p>
+
+
+
+<div class="contador">
+
+👥 Total de candidatos:
+
+<strong id="totalCandidatos">
+Carregando...
+</strong>
+
+</div>
+
+
+
+<div class="data-atual" id="dataAtual">
+
+</div>
+
+
+
+<button id="btnSair" class="btn-sair">
+
+Sair
+
+</button>
+
+
+
+</header>
+
+
+
+
+
+<main class="card">
+
+
+
+<div class="search-box">
+
+
+<input
+
+type="text"
+
+id="pesquisa"
+
+placeholder="Digite o nome do candidato..."
+
+>
+
+
+<button id="btnPesquisar">
+
+Pesquisar
+
+</button>
+
+
+</div>
+
+
+
+
+
+<div id="resultado">
+
+
+<div class="mensagem">
+
+Faça uma pesquisa para começar.
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="cadastro">
+
+
+<h2>
+Cadastrar candidato
+</h2>
+
+
+
+
+<input
+
+type="text"
+
+id="nome"
+
+placeholder="Nome do candidato"
+
+>
+
+
+
+
+
+<select id="plataforma">
+
+
+<option value="Catho">
+Catho
+</option>
+
+
+<option value="LinkedIn">
+LinkedIn
+</option>
+
+
+<option value="Indicação">
+Indicação
+</option>
+
+
+<option value="Outro">
+Outro
+</option>
+
+
+</select>
+
+
+
+
+
+
+
+<select id="status">
+
+
+<option value="Em contato">
+Em contato
+</option>
+
+
+<option value="Contato realizado">
+Contato realizado
+</option>
+
+
+<option value="Aguardando retorno">
+Aguardando retorno
+</option>
+
+
+<option value="Entrevista marcada">
+Entrevista marcada
+</option>
+
+
+<option value="Contratado">
+Contratado
+</option>
+
+
+<option value="Reprovado">
+Reprovado
+</option>
+
+
+</select>
+
+
+
+
+
+
+
+<button id="btnCadastrar">
+
+Cadastrar candidato
+
+</button>
+
+
+
+</div>
+
+
+
+
+</main>
+
+
+
+</div>
+
+
+
+
+
+<script type="module" src="js/script.js"></script>
+
+
+</body>
+
+</html>
